@@ -6,7 +6,7 @@ In this repo, we will explore basics of RESTful APIs, for jogging the memory & t
 Representational State Transfer
 
 ## Method
-GET — Get a resource from a server.
+GET — Get a resource from a server. (read only)
 POST — Create a new resource on the server.
 PUT — Update a request on the server.
 PATCH — Partially update a request on the server.
