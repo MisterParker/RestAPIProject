@@ -57,11 +57,11 @@ Method 1
 Method 2
 some people prefer to use query strings to access a nested resource.
 
-'''
+```
 query - a query allows us to pass on additional parameters along with our HTTP Request.
 
 GET /guests?event_iq=12
-'''
+```
 
 ## API Versioning
 > Source: https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design#uri-versioning
@@ -73,44 +73,44 @@ Its common that over time the APIs will develop further & undergo changes. But i
 # 1. No Versioning
 Simple Approach, but outdated, may be accepted for internal only.
 Eg: 
-'''
+```
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 
 {"id":3,"name":"Contoso LLC","address":"1 Microsoft Way Redmond WA 98053"}
-'''
+```
 
 # 2. URI Versioning 
 
 
 # 3. Query String Versioning
 Eg:
-'''
+```
 https://adventure-works.com/customers/3?version=2.
-'''
+```
 
 # 4. Header Versioning
-'''
+```
 GET https://adventure-works.com/customers/3 HTTP/1.1
 Custom-Header: api-version=1
-'''
+```
 
-'''
+```
 GET https://adventure-works.com/customers/3 HTTP/1.1
 Custom-Header: api-version=2
-'''
+```
 
 # 5. Media Type Versioning
-'''
+```
 GET https://adventure-works.com/customers/3 HTTP/1.1
 Accept: application/vnd.adventure-works.v1+json
-'''
+```
 
 ## Data Interchange Format
 
 # 1. XML
 Eg:
-'''
+```
 <?xml version="1.0" encoding="UTF-8">
 <car>
     <company>Mahindra</company>
@@ -127,11 +127,11 @@ Eg:
     </models>
     <type>SUV</type>
     <year>2018</year>
-'''
+```
 
 # 2. JSON
 Eg:
-'''
+```
 {
     "company": "Mahindra",
     "name": "Marazzo",
@@ -148,4 +148,9 @@ Eg:
     "type": "SUV",
     "year": "2018",
 }
-'''
+```
+
+# Design Responses
+
+> All responses from the REST APIs should follow standards & include all the proper HTTP Codes.
+
